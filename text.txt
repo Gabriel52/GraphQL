@@ -1,0 +1,51 @@
+#API REST
+
+GET /Users
+POST /Users
+PUT /Users
+DELETE /Users
+
+------------------
+
+#GRAPHQL
+
+POST /graphql
+
+query/mutation/subscription
+
+query = buscar informação
+
+mutation = alterar/criar/deltar uma informação
+
+subsription = toda vez que eu quero ficar escutando uma função em tempo real (integração de real time)
+
+{
+
+    mutation updateUser {
+        updateUser( id: 1){
+            nome: "Diego"
+        }
+    }
+
+    query todosUsuarios {
+        users()
+    }
+
+    query todosPedidos {
+        oerders()
+    }
+}
+
+* Determina o que quer receber atráves do corpo da requisição
+
+
+VANTAGENS
+
+* Ele tem um metodo para escutar funções em tempo real(real time), fazendo com que não precise baixar 
+    frameworks para isso exemplo socket.in
+
+* Ele pode ter diversar requisições em uma query só, aumentando a performance
+
+* Passa mais responsabilidades para o Front End
+
+* Cria a documentação automatica (schema)
